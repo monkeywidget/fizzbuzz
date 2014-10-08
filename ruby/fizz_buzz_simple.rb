@@ -8,7 +8,7 @@ class FizzBuzzSimple
         print "FizzBuzz "; next
       elsif i%3 == 0
         print "Fizz "; next
-      elsif i%3 == 0
+      elsif i%5 == 0
         print "Buzz "; next
       else
         print i, " "
