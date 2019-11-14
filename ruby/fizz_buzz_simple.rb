@@ -1,21 +1,14 @@
-class FizzBuzzSimple
+class FizzBuzz
+  def emit_on(i)
+    print "Fizz" if i%3 == 0
+    print "Buzz" if i%5 == 0
+    print i unless i%3 == 0 || i%5 == 0
+    print "\n"
+  end
 
-  def fizzbuzz ()
+  def fizzbuzz
+    (1..100).each { |i| emit_on i }
+  end
+end
 
-    (1..100).each do |i|
-
-      if i%15 == 0
-        print "FizzBuzz "; next
-      elsif i%3 == 0
-        print "Fizz "; next
-      elsif i%5 == 0
-        print "Buzz "; next
-      else
-        print i, " "
-      end # end switch
-
-    end # end loop
-
-  end # end method
-
-end # end class
+FizzBuzz.new.fizzbuzz
