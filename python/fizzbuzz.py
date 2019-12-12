@@ -1,7 +1,7 @@
-t = []
-for i in range(100) :
-  if i % 15 == 0 : t.append("FizzBuzz"); continue
-  if i % 3 == 0 :  t.append("Fizz"); continue
-  if i % 5 == 0 : t.append("Buzz"); continue
-  t.append("%d" % i)
-print " ".join(t)
+def process(num):
+   if num % 3 == 0 :  return "Fizz"
+   elif num % 5 == 0 :  return "Buzz"
+   else : return num
+
+for i in range(100):
+   print process(i)
